@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homewell Medical Supplies, LLC - Medical Billing & RCM Services</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#0a2540',
+                            900: '#07182b',
+                        },
+                        medical: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                        tealAccent: {
+                            500: '#0d9488',
+                            600: '#0f766e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-hero {
+            background: linear-gradient(135deg, #07182b 0%, #0a2540 50%, #0d4a75 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 bg-slate-50 flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-medical-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-medical-500/20 group-hover:bg-medical-700 transition">
+                        <i class="fa-solid font-bold text-2xl fa-heart-pulse"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-navy-900 tracking-tight block leading-none">HOMEWELL</span>
+                        <span class="text-xs font-semibold text-medical-600 tracking-wider uppercase">Medical Supplies & RCM</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-medical-600 font-medium transition">Home</a>
+                    <a href="#services" class="text-slate-600 hover:text-medical-600 font-medium transition">Services</a>
+                    <a href="#process" class="text-slate-600 hover:text-medical-600 font-medium transition">Our Process</a>
+                    <a href="#about" class="text-slate-600 hover:text-medical-600 font-medium transition">Why Choose Us</a>
+                    <a href="#contact" class="bg-medical-600 hover:bg-medical-700 text-white font-semibold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition duration-200">Contact Us</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-navy-900 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Home</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Services</a>
+            <a href="#process" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Our Process</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Why Choose Us</a>
+            <a href="#contact" class="mobile-link block w-full text-center bg-medical-600 text-white font-semibold px-4 py-2.5 rounded-lg shadow mt-2">Contact Us</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="home" class="gradient-hero text-white py-20 lg:py-28 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-medical-100 text-sm font-medium border border-white/10">
+                            <i class="fa-solid fa-shield-halved text-teal-400"></i>
+                            <span>Trusted Healthcare Financial Partner</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Optimize Revenue. <br class="hidden sm:inline">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-teal-300">Accelerate Reimbursements.</span>
+                        </h1>
+                        <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                            Homewell Medical Supplies, LLC delivers end-to-end Revenue Cycle Management (RCM) and specialized medical billing services designed to eliminate denials and maximize clean claim payouts for healthcare providers.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                            <a href="#contact" class="bg-tealAccent-500 hover:bg-tealAccent-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-center">
+                                Request a Free RCM Audit
+                            </a>
+                            <a href="#services" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition text-center backdrop-blur-sm">
+                                Explore Services
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="bg-white/10 p-6 sm:p-8 rounded-3xl border border-white/15 backdrop-blur-md shadow-2xl relative">
+                            <div class="absolute -top-4 -right-4 bg-tealAccent-500 text-white p-3 rounded-2xl shadow-lg hidden sm:block">
+                                <i class="fa-solid fa-chart-line text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i> RCM Excellence Guarantee
+                            </h3>
+                            <ul class="space-y-4 text-slate-200">
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1.5 bg-medical-500/20 rounded-lg text-teal-300 mt-1"><i class="fa-solid fa-check text-xs"></i></div>
+                                    <span>Streamlined Durable Medical Equipment (DME) Claims</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1.5 bg-medical-500/20 rounded-lg text-teal-300 mt-1"><i class="fa-solid fa-check text-xs"></i></div>
+                                    <span>Comprehensive Provider Enrollment & Credentialing</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1.5 bg-medical-500/20 rounded-lg text-teal-300 mt-1"><i class="fa-solid fa-check text-xs"></i></div>
+                                    <span>Proactive Denial Management & Swift Appeals</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1.5 bg-medical-500/20 rounded-lg text-teal-300 mt-1"><i class="fa-solid fa-check text-xs"></i></div>
+                                    <span>HIPAA Compliant & Industry-Standard Protocols</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Stats / Highlights Strip -->
+        <section class="bg-white border-y border-slate-200 py-10 shadow-inner">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="space-y-1">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-navy-800">98.5%</div>
+                        <div class="text-sm font-medium text-slate-500">First-Pass Claim Rate</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-medical-600">30%</div>
+                        <div class="text-sm font-medium text-slate-500">Faster Reimbursements</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-tealAccent-600">100%</div>
+                        <div class="text-sm font-medium text-slate-500">HIPAA Compliant</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-navy-800">24/7</div>
+                        <div class="text-sm font-medium text-slate-500">Dedicated Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section id="services" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-medical-600">Our Services</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-navy-900">End-to-End Medical Billing Solutions</p>
+                    <p class="text-slate-600">We manage complex billing operations so you can focus on delivering exceptional patient care and growing your healthcare business.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl group-hover:bg-medical-600 group-hover:text-white transition">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy-900">Comprehensive RCM</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Complete management of your financial cycle—from patient registration and claim creation to final payment collection and reporting.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl group-hover:bg-medical-600 group-hover:text-white transition">
+                                <i class="fa-solid fa-code-commit"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy-900">Medical Billing & Coding</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Certified medical coders utilizing up-to-date ICD-10, CPT, and HCPCS codes to ensure error-free submissions and maximum payouts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl group-hover:bg-medical-600 group-hover:text-white transition">
+                                <i class="fa-solid fa-truck-medical"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy-900">DME Claims Processing</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Specialized expertise in Durable Medical Equipment (DME) billing rules, required documentation, prior authorizations, and modifier usage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl group-hover:bg-medical-600 group-hover:text-white transition">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy-900">Provider Credentialing</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Fast-track payer enrollment and provider credentialing to expand your network reach and ensure seamless insurance reimbursement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl group-hover:bg-medical-600 group-hover:text-white transition">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy-900">Denial Management</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Rigorous analysis of rejected claims, systematic appeal creation, and continuous follow-up to recover lost revenue promptly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl group-hover:bg-medical-600 group-hover:text-white transition">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy-900">Eligibility & Verification</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Pre-service coverage checks and authorization verifications to reduce claim rejections before care or equipment is provided.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-tealAccent-600">Seamless Workflow</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-navy-900">Our Proven RCM Workflow</p>
+                    <p class="text-slate-600">How we streamline your medical billing operations for maximum performance and faster turnaround.</p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6 relative">
+                    <!-- Step 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center relative">
+                        <div class="w-10 h-10 bg-navy-800 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4 text-lg">1</div>
+                        <h4 class="font-bold text-navy-900 mb-2">Patient Intake & Verification</h4>
+                        <p class="text-xs text-slate-500">Verifying patient insurance benefits and obtaining prior authorizations.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center relative">
+                        <div class="w-10 h-10 bg-medical-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4 text-lg">2</div>
+                        <h4 class="font-bold text-navy-900 mb-2">Accurate Coding & Entry</h4>
+                        <p class="text-xs text-slate-500">Mapping clinical documentation with precise medical codes and modifiers.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center relative">
+                        <div class="w-10 h-10 bg-tealAccent-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4 text-lg">3</div>
+                        <h4 class="font-bold text-navy-900 mb-2">Clean Claim Submission</h4>
+                        <p class="text-xs text-slate-500">Electronic submission with robust scrubbers to ensure 98%+ clean claims.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center relative">
+                        <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4 text-lg">4</div>
+                        <h4 class="font-bold text-navy-900 mb-2">Payment & Denial Recovery</h4>
+                        <p class="text-xs text-slate-500">Posting payments, handling patient statements, and aggressively appealing denials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Homewell Section -->
+        <section id="about" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-teal-400">Why Homewell</h2>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Dedicated Financial Partners for Your Practice</h3>
+                        <p class="text-slate-300">
+                            At Homewell Medical Supplies, LLC, we understand that modern healthcare providers face increasing administrative burdens and tight insurance regulations. Our dedicated medical billing specialists work as an extension of your team to ensure financial peace of mind.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-white/10 rounded-xl text-teal-400">
+                                    <i class="fa-solid fa-chart-pie text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-lg">Transparent Reporting</h4>
+                                    <p class="text-sm text-slate-300">Real-time visibility into your revenue pipeline with detailed monthly analytics.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-white/10 rounded-xl text-teal-400">
+                                    <i class="fa-solid fa-headset text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-lg">Personalized Account Managers</h4>
+                                    <p class="text-sm text-slate-300">Direct line to billing experts who know your specific specialty inside out.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HIPAA Badge Box -->
+                    <div class="bg-gradient-to-br from-slate-800 to-navy-800 p-8 sm:p-10 rounded-3xl border border-slate-700 shadow-2xl space-y-6">
+                        <div class="flex items-center gap-4 border-b border-slate-700 pb-6">
+                            <div class="w-16 h-16 bg-teal-500/20 text-teal-400 rounded-2xl flex items-center justify-center text-3xl">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white">Strict HIPAA Compliance</h4>
+                                <p class="text-xs text-slate-400">Data Security & Patient Privacy First</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            We adhere to the highest standards of data security, safeguarding protected health information (PHI) through encrypted transmission, restricted access, and robust compliance audits.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-slate-700/60 text-slate-200 text-xs px-3 py-1.5 rounded-md border border-slate-600">100% HIPAA Compliant</span>
+                            <span class="bg-slate-700/60 text-slate-200 text-xs px-3 py-1.5 rounded-md border border-slate-600">Secure SSL Transmission</span>
+                            <span class="bg-slate-700/60 text-slate-200 text-xs px-3 py-1.5 rounded-md border border-slate-600">Encrypted Storage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-medical-600">Get In Touch</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-navy-900">Ready to Elevate Your Revenue Cycle?</p>
+                    <p class="text-slate-600">Reach out today for a consultation or free RCM workflow assessment.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <!-- Contact Details Card -->
+                    <div class="lg:col-span-5 bg-navy-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col justify-between">
+                        <div class="space-y-8">
+                            <h3 class="text-2xl font-bold text-white">Contact Information</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Contact Homewell Medical Supplies, LLC to discuss custom medical billing solutions for your organization.
+                            </p>
+
+                            <div class="space-y-6">
+                                <!-- Phone -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-white/10 text-teal-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-slate-400 uppercase tracking-wider block">Phone Number</span>
+                                        <a href="tel:9784945101" class="text-lg font-semibold text-white hover:text-teal-300 transition">(978) 494-5101</a>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-white/10 text-teal-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-slate-400 uppercase tracking-wider block">Email Address</span>
+                                        <a href="mailto:homewellmedicalsupplies1@gmail.com" class="text-sm font-semibold text-white hover:text-teal-300 transition break-all">
+                                            homewellmedicalsupplies1@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-white/10 text-teal-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-slate-400 uppercase tracking-wider block">Main Office</span>
+                                        <p class="text-sm font-semibold text-white leading-relaxed">
+                                            5 Hillaire Pl, Nanuet, NY 10954
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-8 border-t border-slate-800 mt-8 text-xs text-slate-400">
+                            Available Monday - Friday, 9:00 AM - 5:00 PM EST
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-lg">
+                        <form id="contactForm" class="space-y-6">
+                            <div id="formFeedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2" for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2" for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2" for="email">Email Address *</label>
+                                    <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2" for="serviceSelect">Service Interested In</label>
+                                    <select id="serviceSelect" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition text-sm bg-white">
+                                        <option value="RCM">Comprehensive RCM</option>
+                                        <option value="Billing">Medical Billing & Coding</option>
+                                        <option value="DME">DME Claims Processing</option>
+                                        <option value="Credentialing">Provider Enrollment / Credentialing</option>
+                                        <option value="Denials">Denial Management & Appeals</option>
+                                        <option value="Other">Other Query</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-2" for="message">Message / Details</label>
+                                <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-500 focus:border-medical-500 outline-none transition text-sm" placeholder="Tell us about your practice or billing needs..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-200">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4 md:col-span-2">
+                    <a href="#home" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-medical-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white">HOMEWELL</span>
+                    </a>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        Homewell Medical Supplies, LLC is a premier provider of end-to-end Revenue Cycle Management, medical billing, and DME claims optimization.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#process" class="hover:text-white transition">Our Process</a></li>
+                        <li><a href="#about" class="hover:text-white transition">Why Choose Us</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>(978) 494-5101</li>
+                        <li class="break-all">homewellmedicalsupplies1@gmail.com</li>
+                        <li>5 Hillaire Pl, Nanuet, NY 10954</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="currentYear"></span> Homewell Medical Supplies, LLC. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400">HIPAA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Set year dynamically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const formFeedback = document.getElementById('formFeedback');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const name = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if(!name || !phone || !email || !message) {
+                formFeedback.className = "p-4 rounded-xl text-sm font-medium bg-red-100 text-red-700 border border-red-200 block";
+                formFeedback.textContent = "Please fill out all required fields.";
+                return;
+            }
+
+            // Simulate Successful Submission
+            formFeedback.className = "p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-800 border border-emerald-200 block";
+            formFeedback.innerHTML = "<i class='fa-solid fa-circle-check mr-2'></i> Thank you! Your message has been sent successfully. A billing representative will contact you shortly.";
+            
+            contactForm.reset();
+
+            setTimeout(() => {
+                formFeedback.classList.add('hidden');
+            }, 6000);
+        });
+    </script>
+</body>
+</html>
